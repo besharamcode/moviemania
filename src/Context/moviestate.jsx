@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import movieContext from "./moviecontext";
 const apikey = import.meta.env.VITE_SOME_VALUE;
-const apiUrl = ` https://www.omdbapi.com/?&apikey=${apikey}`;
+const apiUrl = ` http://www.omdbapi.com/?&apikey=${apikey}`;
 
 const MovieProvider = (props) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,6 +17,7 @@ const MovieProvider = (props) => {
       if (data.Response === "True") {
         setIsLoading(false);
         setMovie(data.Search);
+        console.log(data.Search)
       } else {
         setIsError({
           show: "true",
@@ -24,7 +25,7 @@ const MovieProvider = (props) => {
         });
       }
     } catch (error) {
-      console.log(error);
+      alert(error);
     }
   };
 

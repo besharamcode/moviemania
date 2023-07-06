@@ -131,7 +131,7 @@ body {
 
 .card-container {
   width: 80%;
-  margin: 3rem auto;
+  margin: 1rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   flex-wrap: wrap;
@@ -219,6 +219,42 @@ footer {
   padding: 0.5rem;
   color: white;
 }
+
+.error-box{
+  height: 70vh;
+  width: 100svw;
+  color:#428d9e;
+}
+
+.error-box .error{
+  user-select: none;
+  font-size: 10rem;
+  font-family:"Bagel Fat One", cursive;
+  line-height: 1;
+}
+
+.error-box .msg{
+  user-select: none;
+  font-size: 2rem;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+
+.error-box .nav-btn{
+  user-select: none;
+  color: white;
+  background: #428d9e;
+  font-family: "Alegreya Sans SC", sans-serif;
+  padding: .5rem 2rem;
+  border-radius: .7rem;
+  margin-top: 1rem;
+  transition: all .1s ease;
+}
+.nav-btn:hover{
+  box-shadow: 0rem 2px 3px 1px #428d9e;
+  background: white;
+  color: #428d9e;
+}
+
 
 @media screen and (max-width: 48em) {
   html {

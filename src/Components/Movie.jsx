@@ -7,7 +7,7 @@ import Footer from "./Footer"
 const Movie = () => {
   const { id } = useParams()
   const apikey = import.meta.env.VITE_SOME_VALUE
-  const apiUrl = ` http://www.omdbapi.com/?&apikey=${apikey}`;
+  const apiUrl = ` https://www.omdbapi.com/?&apikey=${apikey}`;
   // eslint-disable-next-line no-unused-vars
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState({ show: "false", msg: "" })
@@ -28,7 +28,7 @@ const Movie = () => {
         })
       }
     } catch (error) {
-      console.log(error);
+      alert(error);
     }
   };
 
