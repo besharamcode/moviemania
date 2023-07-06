@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import movieContext from "./moviecontext";
 const apikey = import.meta.env.VITE_SOME_VALUE;
-const apiUrl = ` http://www.omdbapi.com/?&apikey=${apikey}`;
+const apiUrl = ` https://www.omdbapi.com/?&apikey=${apikey}`;
 
 const MovieProvider = (props) => {
   const [isLoading, setIsLoading] = useState(true);
